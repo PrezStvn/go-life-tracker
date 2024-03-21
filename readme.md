@@ -44,5 +44,6 @@ Contributing
 
 As Go Life Tracker is in the process of broadening its feature set, contributions are particularly valuable at this stage. Whether you're interested in contributing code, suggesting new features, or providing feedback on usability, your input is highly welcome.
 
-License
+License-
+
 Go Life Tracker is open source under the MIT License, allowing for wide use, modification, and sharing within the bounds of this permissive license. - see LICENSE.md for details

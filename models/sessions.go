@@ -4,16 +4,17 @@ import "time"
 
 
 type Session struct {
-    SessionID    int        `json:"session_id"`
-    UserID       int        `json:"user_id"`
+    SessionId    int        `json:"session_id"`
+    UserId       int        `json:"user_id"`
     SessionDate  time.Time  `json:"session_date"`
     Notes        string     `json:"notes,omitempty"` // Optional field
-    ProgramID    *int       `json:"program_id,omitempty"` // Pointer to allow null
+    ProgramId    *int       `json:"program_id,omitempty"` // Pointer to allow null
 }
 
 type SessionSubmission struct {
-    UserID      int       `json:"user_id"`
-    ProgramID   *int      `json:"program_id,omitempty"` // Use a pointer to allow nil
+    UserId      int       `json:"-"`
+    ProgramId   *int      `json:"program_id,omitempty"` // Use a pointer to allow nil or omitempty
+    SessionDate time.Time `json:"session_date,omitempty"`
     Notes       string    `json:"notes,omitempty"`
     Workouts    []Workout `json:"workouts"`
 }

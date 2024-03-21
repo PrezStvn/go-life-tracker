@@ -88,7 +88,7 @@ func Login(c *gin.Context) {
 
 	// Generate token (JWT or session token), omitted for brevity
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
-		"sub": user.UserID,
+		"sub": user.UserId,
 		"exp": time.Now().Add(time.Hour * 24).Unix(),
 	})
 

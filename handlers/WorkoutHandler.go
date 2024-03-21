@@ -13,7 +13,7 @@ func PostWorkoutSession(c *gin.Context) {
 
 	// userID from JWT middleware
 	if userID, exists := c.Get("userID"); exists {
-		session.UserID = userID.(int)
+		session.UserId = userID.(int)
 	} else {
 		c.JSON(http.StatusUnauthorized, gin.H{"error": "Unauthorized"})
 		return
@@ -42,14 +42,14 @@ func PostSession(c *gin.Context) {
 		})
 	}
 	//type assertion required
-	userID, ok := value.(int)
+	userId, ok := value.(float64)
 	if !ok {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"error": "Could not identify User",
 		})
 	}
 
-	req.UserID = userID
+	req.UserId = int(userId)
 	
 	// Create the session in the database and retrieve the generated SessionID
 	err := services.CreateSession(&req)

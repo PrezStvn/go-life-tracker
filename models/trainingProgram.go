@@ -5,7 +5,7 @@ import (
 )
 
 type TrainingProgram struct {
-    ProgramID   int       `json:"program_id"`
+    ProgramId   int       `json:"program_id"`
     Name        string    `json:"name"`
     Description string    `json:"description,omitempty"` // Optional; omitempty omits the field if empty
     CreatedAt   time.Time `json:"created_at"`
