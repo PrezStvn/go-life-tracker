@@ -1,0 +1,4 @@
+
+-[done]Establish mvp database tables needed
+-create models to represent db tables
+-create controller/handlers for http requests(start with auth[I am not creating a register as I am the only one using this])
