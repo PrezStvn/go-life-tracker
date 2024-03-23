@@ -1,4 +1,6 @@
-
--[done]Establish mvp database tables needed
--create models to represent db tables
--create controller/handlers for http requests(start with auth[I am not creating a register as I am the only one using this])
+-frontend client of some kind with bare login reg post workout functionality
+-intend to submit from a notepad like environment so string parsing will need to be handled on the frontend 
+    -this comes with some implementation of a fuzzy match(idea here is that i can write 
+        "rdl 7x7 @ 225" and string parser will not only split the string into its appropriate vars but also match workout names to a particular name on the backend[rdl == romaniandeadlift on the backend])
+-consider making a roles table just to implement rbac[can just have specific calls to middleware for each endpoint to ensure that the user associated with the jwt has the roles needed to access said endpoint]
+    --this would also allow for additional admin practice[create admin role and create views specifically for them and resources only they can access]
